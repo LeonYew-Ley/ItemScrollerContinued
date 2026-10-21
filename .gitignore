@@ -401,3 +401,4 @@ FodyWeavers.xsd
 *.sln.iml
 ItemScroller.dll
 ItemScroller.zip
+publication-status.json

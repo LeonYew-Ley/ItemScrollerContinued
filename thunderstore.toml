@@ -1,0 +1,29 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "LeonYew"
+name = "ItemScroller_Continued"
+versionNumber = "1.0.0"
+description = "Switch occupied inventory slots with the mouse wheel. Maintained ItemScroller fork with null-safe item handling."
+websiteUrl = "https://github.com/LeonYew-Ley/ItemScrollerContinued"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack_PEAK = "5.4.2403"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./artifacts/releases"
+
+[[build.copy]]
+source = "./ItemScroller/bin/Release/netstandard2.1/ItemScrollerContinued.dll"
+target = "BepInEx/plugins/ItemScrollerContinued/ItemScrollerContinued.dll"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["peak"]
+
+[publish.categories]
+peak = ["mods", "gameplay"]

@@ -8,7 +8,7 @@ An independently maintained, GPLv3 fork of [MasterAli2/ItemScroller](https://git
 
 **Remove or disable the original ItemScroller first.** The two plugins patch the same game method and must not run together. Continued declares an incompatibility with `MasterAli2.ItemScroller` so BepInEx will not load both.
 
-- Mod manager: install BepInExPack_PEAK and import the release ZIP as a local mod, or install this package from Thunderstore once it is listed.
+- Mod manager: install [Item Scroller Continued on Thunderstore](https://thunderstore.io/c/peak/p/LeonYew/ItemScroller_Continued/). Its BepInExPack_PEAK dependency is installed automatically. You can also import the release ZIP as a local mod.
 - Manual: install [BepInExPack_PEAK](https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/), then extract the release ZIP's `BepInEx` directory into the PEAK game directory.
 - [Download releases](https://github.com/LeonYew-Ley/ItemScrollerContinued/releases).
 
@@ -46,6 +46,16 @@ dotnet build ItemScroller/ItemScrollerContinued.csproj --configuration Release -
 Alternatively, set `PEAK_GAME_PATH` to the PEAK installation directory for a direct `dotnet build`. Release ZIPs are written to `artifacts/releases` and contain only the plugin DLL, package metadata, documentation, attribution and icon. The managed tests do not require PEAK and run in GitHub Actions.
 
 Manual smoke checks: disable the original plugin; launch into the airport; open, use and drop the passport; scroll in both directions across occupied/empty hotbar slots and the backpack; then check a rope spool before and after `MaxHoldTime`. Repeat as host and client before reporting multiplayer compatibility.
+
+## Publishing
+
+After updating the plugin version, manifest, changelog and `thunderstore.toml`, build and check a new release ZIP with `tools/Build-Release.ps1`. Publish that exact ZIP with the official Thunderstore CLI:
+
+```powershell
+./tools/Publish-Thunderstore.ps1 -TokenFile "<private-token-file>" -TcliPath "<path-to-tcli>"
+```
+
+The script checks package metadata and contents, rejects an existing version and passes authentication through a temporary process environment variable. Keep the token file outside the repository. After publication, verify the public package API, PEAK listing and downloaded ZIP hash against the release artifact. Community review and in-game testing are separate checks.
 
 ## Source and license
 

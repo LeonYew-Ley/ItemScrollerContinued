@@ -2,6 +2,7 @@
 
 ## 1.0.0 — 2026-10-21
 
+- Published on [Thunderstore](https://thunderstore.io/c/peak/p/LeonYew/ItemScroller_Continued/) on 2026-10-22 (Asia/Shanghai), using the same ZIP as the GitHub release.
 - Continued fork of [MasterAli2/ItemScroller](https://github.com/MasterAli2/ItemScroller), maintained by LeonYew-Ley under GPLv3.
 - Fix the null-component-array exception that interrupts switching, dropping and using items in the same update. This addresses a verified failure path behind the symptoms described in [upstream issue #1](https://github.com/MasterAli2/ItemScroller/issues/1).
 - Avoid inspecting held items on frames with no wheel input; tolerate partially initialized inventory slots and an absent selection.
