@@ -1,0 +1,9 @@
+{
+  "name": "ItemScroller_Continued",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/LeonYew-Ley/ItemScrollerContinued",
+  "description": "Switch occupied inventory slots with the mouse wheel. Maintained ItemScroller fork with null-safe item handling.",
+  "dependencies": [
+    "BepInEx-BepInExPack_PEAK-5.4.2403"
+  ]
+}

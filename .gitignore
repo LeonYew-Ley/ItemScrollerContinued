@@ -399,7 +399,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-icon.png
 ItemScroller.dll
 ItemScroller.zip
-manifest.json

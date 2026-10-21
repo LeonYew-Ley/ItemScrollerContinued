@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../ItemScroller/Patches/ScrollSwitching.cs" Link="ScrollSwitching.cs" />
+  </ItemGroup>
+</Project>
