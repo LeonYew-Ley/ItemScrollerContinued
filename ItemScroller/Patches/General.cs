@@ -87,6 +87,11 @@ namespace ItemScroller.Patches
 
             if (item.OnScrolled != null || (isMouseInput && item.OnScrolledMouseOnly != null)) return true;
 
+            if (item.itemComponents == null)
+            {
+                return false;
+            }
+
             foreach (ItemComponent component in item.itemComponents)
             {
                 if (component is RopeSpool)
